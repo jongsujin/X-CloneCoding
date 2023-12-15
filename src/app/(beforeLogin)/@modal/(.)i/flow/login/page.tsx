@@ -1,3 +1,10 @@
-export default function Home() {
-  return <main>로그인 모달</main>;
+import LoginModal from "@/app/(beforeLogin)/_component/LoginModal";
+
+export default function Page() {
+  return (
+    <>
+      난 가로채기지롱 ㅋㅋ
+      <LoginModal />
+    </>
+  );
 }
