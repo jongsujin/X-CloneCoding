@@ -1,3 +1,11 @@
+import SearchForm from "@/app/(afterLogin)/_component/SearchForm";
+
 export default function Home() {
-  return <main>검색페이지</main>;
+  return (
+    <main>
+      <div>
+        <SearchForm />
+      </div>
+    </main>
+  );
 }
