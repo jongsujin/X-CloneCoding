@@ -4,7 +4,7 @@ import cors from "cors";
 import { handlers } from "./handlers";
 
 const app = express();
-const port = 9090;
+const port = 9091;
 
 app.use(
   cors({
