@@ -37,13 +37,13 @@ export const handlers = [
     console.log("회원가입");
     // return HttpResponse.text(JSON.stringify('user_exists'), {
     //   status: 403,
-    // }) 실패 시
+    // })
     return HttpResponse.text(JSON.stringify("ok"), {
       headers: {
         "Set-Cookie": "connect.sid=msw-cookie;HttpOnly;Path=/;Max-Age=0",
       },
     });
-  }), // 성공 시
+  }),
   http.get("/api/postRecommends", ({ request }) => {
     const url = new URL(request.url);
     const cursor = parseInt(url.searchParams.get("cursor") as string) || 0;
