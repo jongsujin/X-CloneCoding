@@ -11,16 +11,16 @@ export const {
     signIn: "/i/flow/login",
     newUser: "/i/flow/signup",
   },
-  callbacks: {
-    async authorized({ request, auth }) {
-      const url = request.nextUrl;
-      // 세션이 없을 때 아래 링크로 리다이렉트 하는 코드
-      if (!auth) {
-        return NextResponse.redirect(`http://localhost:3000/i/flow/login`);
-      }
-      return true;
-    },
-  },
+  // 세션이 없을 때 아래 링크로 리다이렉트 하는 코드
+  // callbacks: {
+  //   async authorized({ request, auth }) {
+  //     const url = request.nextUrl;
+  //     if (!auth) {
+  //       return NextResponse.redirect(`http://localhost:3000/i/flow/login`);
+  //     }
+  //     return true;
+  //   },
+  // },
   providers: [
     CredentialsProvider({
       async authorize(credentials) {
