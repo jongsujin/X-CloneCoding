@@ -1,5 +1,5 @@
 import SearchForm from "@/app/(afterLogin)/_component/SearchForm";
-import TrendSection from "../_component/TrendSection";
+import TrendSection from "./_component/TrendSection";
 import style from "./explore.module.css";
 export default function Home() {
   return (

@@ -1,10 +1,15 @@
-export async function getPostRecommends() {
-  const res = await fetch(`http://localhost:9091/api/postRecommends`, {
-    next: {
-      tags: ["posts", "recommends"],
-    },
-    cache: "no-store",
-  });
+type Props = { pageParam?: number };
+
+export async function getPostRecommends({ pageParam }: Props) {
+  const res = await fetch(
+    `http://localhost:9091/api/postRecommends?cursor=${pageParam}`,
+    {
+      next: {
+        tags: ["posts", "recommends"],
+      },
+      cache: "no-store",
+    }
+  );
 
   if (!res.ok) {
     throw new Error("Failed to fetch data");
